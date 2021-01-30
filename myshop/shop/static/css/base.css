@@ -21,7 +21,7 @@ a:hover {
 
 a.button, input[type="submit"] {
     color:#fff;
-    background:#5993bb;
+    background: #98832b;
     border-radius:4px;
     padding:10px 20px;
     font-size:14px;
@@ -123,8 +123,8 @@ ul.errorlist {
 }
 
 #subheader {
-    background:#ececec;
-    color:#444;
+    background: #176372;
+    color: #ffffff;
     padding:15px 100px;
     overflow:auto;
 }
@@ -159,6 +159,7 @@ ul.errorlist {
 }
 
 #sidebar ul li {
+
     margin:0;
     list-style:none;
     padding:10px 14px;
@@ -169,12 +170,12 @@ ul.errorlist {
 }
 
 #sidebar ul li.selected {
-    background:#5993bb;
+    background: #176372;
     border-radius:4px;
 }
 
 #sidebar ul li.selected a {
-    color:#fff;
+    color: #ffffff;
 }
 
 #main {
@@ -228,7 +229,7 @@ ul.errorlist {
 .order-info {
     float:right;
     width:300px;
-    background:#efefef;
+    background: #000000;
     padding:10px 20px;
     color:#333;
     border-bottom:4px solid #5993bb;
@@ -324,7 +325,7 @@ form div.field {
     margin-bottom:10px;
     padding:6px 12px;
     border:0;
-    background:#efefef;
+    background: #ffffff;
     color:#666;
     border-radius:4px;
 }
