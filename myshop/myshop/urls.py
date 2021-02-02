@@ -17,15 +17,14 @@ from django.contrib import admin
 from django.urls import include, path
 from django.conf import settings
 from django.conf.urls.static import static
-from shutil import copy
-from pathlib import Path
+
 
 
 
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('cart/', include('cart.urls', namespace='cart')),
+    path('cart/', include('cart.urls', namespace='cart1')),
     path('', include('shop.urls', namespace='shop')),
 ]
 if settings.DEBUG:
