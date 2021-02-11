@@ -1,8 +1,10 @@
+from __future__ import absolute_import, unicode_literals
 from celery import task
 from django.core.mail import send_mail
 from .models import Order
 
-@task
+
+#@task
 def order_created(order_id):
     order = Order.objects.get(id=order_id)
     subject = 'Zamówienie nr {}'.format(order.id)
