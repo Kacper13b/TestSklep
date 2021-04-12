@@ -23,7 +23,6 @@ class Product(models.Model):
     name = models.CharField(max_length=200, db_index=True)
     slug = models.SlugField(max_length=200, db_index=True)
     image = models.ImageField(upload_to='products/%Y/%m/%d', blank=True)
-    #image2 = models.ImageField(upload_to='shop/static/shop/', blank=True)
     description = models.TextField(blank=True)
     stock = models.IntegerField(default=0)
     price = models.DecimalField(max_digits=10, decimal_places=2)
