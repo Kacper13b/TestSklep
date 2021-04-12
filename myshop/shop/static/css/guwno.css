@@ -1,0 +1,145 @@
+@import url(//db.onlinewebfonts.com/c/6ecff1acfc72a3653c6b2ff78e7f6b9c?family=Apple+Symbols);
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'AppleSymbols', sans-serif;
+  text-decoration: none;
+  list-style: none;
+  color: white;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+html {
+  height: 100%;
+  position: relative;
+}
+
+html .guwno {
+  position: absolute;
+  top: 71px;
+  left: 750px;
+  width: 600px;
+  height: 1005px;
+}
+
+body {
+  background-image: linear-gradient(132deg, #313132, #030303);
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+body .left {
+  width: 300px;
+  padding: 25px;
+  border-right: 1px solid #707070;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+body .left .logo {
+  font-size: 50px;
+}
+
+body .left .social {
+  z-index: 10;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body .left .social li {
+  list-style: none;
+  -webkit-filter: invert(1);
+          filter: invert(1);
+  -webkit-transform: scale(0.5);
+          transform: scale(0.5);
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+body .left .social li a {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+body .left .social li:hover {
+  -webkit-transform: scale(0.6) translateY(-15px);
+          transform: scale(0.6) translateY(-15px);
+}
+
+body .right {
+  width: 80%;
+  padding: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+body .right #subheader {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  padding: 25px;
+}
+
+body .right #subheader .navbar {
+  width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+body .right #subheader .navbar li {
+  margin-right: 50px;
+  font-size: 25px;
+}
+
+body .right #subheader .navbar li:hover {
+  color: #EFC862;
+  border-bottom: #EFC862;
+}
+
+body .right .text1 {
+  position: absolute;
+  bottom: 600px;
+  right: 250px;
+  font-size: 60px;
+  font-weight: bold;
+}
+
+body .right .text2 {
+  position: absolute;
+  bottom: 450px;
+  right: 350px;
+  font-size: 30px;
+  width: 350px;
+  color: #707070;
+}
+/*# sourceMappingURL=guwno.css.map */
