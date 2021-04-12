@@ -4,30 +4,60 @@
 <head>
     <meta charset="UTF-8">
     <title>{% block title %}Mój sklep{% endblock %}</title>
-    <link href="{% static "css/base.css"%}" rel="stylesheet">
+    <link href="{% static "css/guwno.css"%}" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
 </head>
+<img src="static/css/guwno.png" class="guwno">
 <body>
-    <div id="header">
-        <a href="/" class="logo">Mój sklep </a>
-    </div>
-    <div id="subheader">
-        <div class="cart">
-            {% with total_items=cart|length %}
-                {% if cart|length > 0 %}
-                    Koszyk:
-                    <a href="{% url "cart:cart_detail" %}">
-                        Liczba produktów: {{ total_items }},
-                        Do zapłaty: {{ cart.get_total_price }} zł
-                    </a>
-                {% else %}
-                    Koszyk jest pusty
-                {% endif %}
-            {% endwith %}
+    <div class="left">
+        <div id="header">
+            <a href="/" class="logo">Embroidery </a>
         </div>
+        <div id="content">
+            {% block content %}
+            {% endblock %}
+        </div>
+        <ul class="social">
+            <li><a href="#"></a><img src="https://i.ibb.co/x7P24fL/facebook.png" alt="face"></li>
+            <li><a href="#"></a><img src="https://i.ibb.co/Wnxq2Nq/twitter.png"></li>
+            <li><a href="#"></a><img src="https://i.ibb.co/ySwtH4B/instagram.png" alt="instagram"></li>
+        </ul>
     </div>
-    <div id="content">
-        {% block content %}
-        {% endblock %}
+    <div class="right">
+        <div id="subheader">
+            <ul class="navbar">
+                <li><a href='#'></a>Home</li>
+                <li><a href='#'></a>Products</li>
+                <li><a href='#'></a>About</li>
+                <li class="toggle"><a href='#'></a>Location</li>
+                <li class="cart"><i class="fas fa-shopping-cart"></i>
+                    {% with total_items=cart|length %}
+                        {% if cart|length > 0 %}
+                            Koszyk:
+                            <a href="{% url "cart:cart_detail" %}">
+                                Liczba produktów: {{ total_items }},
+                                Do zapłaty: {{ cart.get_total_price }} zł
+                            </a>
+                        {% else %}
+                            Koszyk jest pusty
+                        {% endif %}
+                    {% endwith %}
+                        </li>
+            </ul>
+        </div>
+        <div class='text1'>Essa byczku +1</div>
+        <div class='text2'>Create embroidered t-shirts and polos with your own design, logo or brand name</div>
+
     </div>
+    <script>
+        const menuToggle = document.querySelector('.toggle')
+        const showcase = document.querySelector('.right')
+        menuToggle.addEventListener('click', () => {
+            menuToggle.classList.toggle('active')
+            showcase.classList.toggle('active')
+        })
+    </script>
+    
+
 </body>
 </html>
