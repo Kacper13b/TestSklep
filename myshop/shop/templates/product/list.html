@@ -13,6 +13,11 @@
                 <a href="{% url "shop:product_list" %}">Wszystkie</a>
             </li>
             {% for c in categories %}
+                {% if not category.children.all %}
+                    potrzebne dropdown menu
+                {% else %}
+                    potrzebne dropdown menu!!!!!!!!
+                {% endif %}
                 <li {% if category.slug == c.slug %}class="selected"{% endif %}>
                     <a href="{{ c.get_absolute_url }}">{{ c.name }}</a>
                 </li>
