@@ -7,7 +7,7 @@
     <link href="{% static "css/base.css"%}" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
 </head>
-<img src="static/css/guwno.png" class="guwno">
+{% comment %}<img src="static/css/guwno.png" class="guwno">{% endcomment %}
 <body>
     <div class="left">
         <div id="header">
@@ -17,11 +17,11 @@
             {% block content %}
             {% endblock %}
         </div>
-        <ul class="social">
+        {% comment %}<ul class="social">
             <li><a href="#"></a><img src="https://i.ibb.co/x7P24fL/facebook.png" alt="face"></li>
             <li><a href="#"></a><img src="https://i.ibb.co/Wnxq2Nq/twitter.png"></li>
             <li><a href="#"></a><img src="https://i.ibb.co/ySwtH4B/instagram.png" alt="instagram"></li>
-        </ul>
+        </ul>{% endcomment %}
     </div>
     <div class="right">
         <div id="subheader">
@@ -45,19 +45,8 @@
                         </li>
             </ul>
         </div>
-        <div class='text1'>Essa byczku +1</div>
-        <div class='text2'>Create embroidered t-shirts and polos with your own design, logo or brand name</div>
 
     </div>
-    <script>
-        const menuToggle = document.querySelector('.toggle')
-        const showcase = document.querySelector('.right')
-        menuToggle.addEventListener('click', () => {
-            menuToggle.classList.toggle('active')
-            showcase.classList.toggle('active')
-        })
-    </script>
-    
 
 </body>
 </html>

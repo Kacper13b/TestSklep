@@ -1,8 +1,11 @@
 from django.contrib import admin
 from .models import Category, Product, ProductImage
 
-class ProductImageAdmin(admin.StackedInline):
+
+class ProductImageAdmin(admin.TabularInline):
     model = ProductImage
+    extra = 5
+
 
 @admin.register(Category)
 class CategoryAdmin(admin.ModelAdmin):
@@ -20,6 +23,5 @@ class ProductAdmin(admin.ModelAdmin):
     class Meta:
         model = Product
 
-@admin.register(ProductImage)
-class ProductImageAdmin(admin.ModelAdmin):
-    pass
+
+admin.site.register(ProductImage)
